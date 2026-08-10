@@ -23,7 +23,7 @@ nav {
   align-items: center;
   background-color: rgb(255, 255, 255);
   border-bottom: 0.5px solid rgb(230, 230, 230);
-  border-top: 25px solid rgb(168, 28, 28);
+  border-top: 17px solid rgb(168, 28, 28);
 }
 
 .logo {
@@ -223,12 +223,20 @@ nav {
 .burger-bg {
   width: 300px;
   height: 350px;
-  background-color: rgb(168, 28, 28);
+  /* background-color: rgb(168, 28, 28); */
   border-radius: 33px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.red-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(168, 28, 28);
+  border-radius: 33px;
+  clip-path: polygon(90% 0%, 100% 0%, 100% 90%, 100% 100%, 0% 100%, 0% 15%);
 }
 
 .burger-bg img {
@@ -416,7 +424,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .product-card:hover {
@@ -800,3 +808,169 @@ nav {
   color: rgb(180, 180, 180);
 }
 
+@media (max-width: 1180px) {
+  nav,
+  .body,
+  .grid-section,
+  .product-section,
+  .experience-section,
+  .khady-footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .body {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .body-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button,
+  .cards {
+    justify-content: center;
+  }
+
+  .body-center {
+    width: 50%;
+  }
+
+  .body-right {
+    width: 40%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 40px 20px;
+  }
+
+  .footer-column {
+    flex: 40%;
+  }
+}
+
+@media (max-width: 844px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navlinks {
+    gap: 20px;
+    font-size: 15px;
+  }
+
+  .search-container input {
+    width: 100px;
+  }
+
+  .body {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .body-center {
+    width: 100%;
+  }
+
+  .burger-bg {
+    margin-top: 30px;
+  }
+
+  .burger-bg img {
+    width: 250%;
+    height: 140%;
+    top: -90px;
+    right: -200px;
+  }
+
+  .body-right {
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .delivery-item {
+    text-align: left;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .grid-section {
+    padding: 20px;
+  }
+
+  .grid-box {
+    grid-template-columns: 1fr;
+  }
+
+  .large-card {
+    grid-column: 1 / 2;
+    grid-row: span 1;
+    min-height: 200px;
+    height: 200px;
+    width: 500px;
+  }
+
+  .pizza-card,
+  .pasta-card {
+    grid-column: 1 / 2;
+    min-height: 140px;
+  }
+
+  .product-section {
+    padding: 20px;
+  }
+
+  .experience-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-experience {
+    width: 100%;
+    max-width: 320px;
+    height: 280px;
+  }
+
+  .experience-img {
+    height: 280px;
+  }
+
+  .left-experience .red-background {
+    width: 200px;
+    height: 220px;
+  }
+
+  .left-card {
+    width: 69px;
+  }
+
+  .experience-img {
+    height: 490px;
+    width: 450px;
+    top: -100px;
+  }
+
+  .status-cards {
+    justify-content: center;
+  }
+
+  .khady-footer {
+    padding: 30px 20px 20px 20px;
+  }
+
+  .footer-column {
+    flex: 100%;
+  }
+}
