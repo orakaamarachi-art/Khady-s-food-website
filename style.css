@@ -14,17 +14,22 @@ header {
 body {
   font-family: "Nunito Sans", sans-serif;
   background-color: rgb(255, 255, 255);
-  /* overflow-x: hidden; */
+  padding-top: 72px;
 }
 
 nav {
   display: flex;
-  padding: 20px 60px;
+  padding: 12px 60px;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(255, 255, 255);
   border-bottom: 0.5px solid rgb(230, 230, 230);
-  border-top: 17px solid rgb(168, 28, 28);
+  border-top: 25px solid rgb(168, 28, 28);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
@@ -875,6 +880,7 @@ nav {
     padding: 20px;
     flex-direction: column;
     text-align: center;
+    padding-top: 107px;
   }
 
   .body-center {
